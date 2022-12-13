@@ -12,6 +12,8 @@ const addNoteHandler = (request, h) => {
     title, tags, body, id, createdAt, updatedAt,
   };
   notes.push(newNote);
+
+  const isSuccess = notes.filter((note) => note.id === id).length > 0;
 };
 
 module.exports = { addNoteHandler };
